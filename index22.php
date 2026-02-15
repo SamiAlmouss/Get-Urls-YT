@@ -2,7 +2,7 @@
 
 if (!isset($_GET['url']) || empty($_GET['url'])) {
     http_response_code(400);
-    echo "ÙŠØ±Ø¬Ù‰ Ø¥Ø±Ø³Ø§Ù„ Ø§Ù„Ø±Ø§Ø¨Ø· Ø¨Ø§Ø³ØªØ®Ø¯Ø§Ù… ?url=";
+    ech "Url is missing!";
     exit();}
 
 $url = $_GET['url'];
