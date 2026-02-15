@@ -20,9 +20,9 @@ preg_match_all(
 if (!empty($matches[1])) {
     $titles = $matches[1];
 };
-
+// '/"simpleText"\s*:\s*"(\d{1,2}:\d{2}(?::\d{2})?)"/u',
 preg_match_all(
-    '/"simpleText"\s*:\s*"(\d{1,2}:\d{2}(?::\d{2})?)"/u',
+    '/"simpleText"\s*:\s*"(\d{1,2}:\d{2}(?::\d{2})?)"\s*},\s*"indexText"/u',
     $source,
     $durationMatches);
 
