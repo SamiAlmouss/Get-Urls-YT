@@ -22,7 +22,7 @@ if (!empty($matches[1])) {
 };
 // '/"simpleText"\s*:\s*"(\d{1,2}:\d{2}(?::\d{2})?)"/u',
 preg_match_all(
-    '/"simpleText"\s*:\s*"(\d{1,2}:\d{2}(?::\d{2})?)"\s*},\s*"indexText"/u',
+    '/"simpleText"\s*:\s*"(\d{1,2}:\d{2}(?::\d{2})?)"\s*},\s*"style"/u',
     $source,
     $durationMatches);
 
