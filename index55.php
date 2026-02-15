@@ -66,7 +66,9 @@ $response = [
     "Thumbnails" => $THUMBNAILs,
     "URLs" => $URLs,
     "titles" => $titles,
-    "durations" => $durations];
+    "durations" => $durations,
+    "durations2" => $durations2,
+    ];
 
 echo json_encode($response,JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
 
