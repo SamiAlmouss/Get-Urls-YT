@@ -239,7 +239,7 @@ if (!$continuation && isset($json['continuationContents']['playlistVideoListCont
 }
     }
 
-  
+  /*
 
     echo "تم جلب " . count($videos) . " فيديو" . "<br>";
     echo "===================================================<br>";
@@ -248,6 +248,20 @@ if (!$continuation && isset($json['continuationContents']['playlistVideoListCont
     foreach ($videos as $video) {
         echo "<br>" . $video['id'] . " - " . $video['title'] . " - " . $video['duration'] . "<br>" ;
     }
+*/
+header("Content-Type:application/json;charset=UTF-8");
+$response = $videos;
+     
+     /*[
+    "Count" => count($videos),
+    "IDs" => $IDs,
+    "Thumbnails" => $THUMBNAILs,
+    "URLs" => $URLs,
+    "titles" => $titles,
+    "durations" => $durations,
+    ];*/
+
+echo json_encode($response,JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
 
 } catch (Exception $e) {
     echo "خطأ: " . $e->getMessage();
