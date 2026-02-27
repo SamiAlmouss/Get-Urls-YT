@@ -133,6 +133,7 @@ if (preg_match('/"VISITOR_DATA":"([^"]+)"/', $html, $v)) {
 
     foreach ($playlistVideos as $item) {
         if (isset($item['playlistVideoRenderer'])) {
+            $lengthText = $item['playlistVideoRenderer']['lengthText']['simpleText'] ?? null;
             $videos[] = [
                 "id" => $item['playlistVideoRenderer']['videoId'],
                 "title" => $item['playlistVideoRenderer']['title']['runs'][0]['text'],
@@ -213,6 +214,7 @@ $continuation = null;
 
 foreach ($items as $item) {
     if (isset($item['playlistVideoRenderer'])) {
+        $lengthText = $item['playlistVideoRenderer']['lengthText']['simpleText'] ?? null;
         $videos[] = [
             "id" => $item['playlistVideoRenderer']['videoId'],
             "title" => $item['playlistVideoRenderer']['title']['runs'][0]['text'],
