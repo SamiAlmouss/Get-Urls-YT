@@ -2,7 +2,7 @@
 
 if (!isset($_GET['vid']) || empty($_GET['vid'])) {
     http_response_code(400);
-    ech "videoID is missing!";
+    echo "videoID is missing!";
     exit();}
 
 $vid = $_GET['vid'];
